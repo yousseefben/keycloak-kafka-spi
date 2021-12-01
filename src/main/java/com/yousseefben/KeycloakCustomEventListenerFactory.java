@@ -90,21 +90,21 @@ public class KeycloakCustomEventListenerFactory implements EventListenerProvider
 
         private Properties getProperties () {
             Properties propsKafka = new Properties();
-//        propsKafka.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-//        propsKafka.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-//        propsKafka.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-//        if (sslEnabled) {
-//            propsKafka.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, keystoreLocation);
-//            propsKafka.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, keystorePassword);
-//            propsKafka.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, trustSoreLocation);
-//            propsKafka.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, trustSorePassword);
-//        }
-//        if (jaasEnabled) {
-//            propsKafka.put(SaslConfigs.SASL_JAAS_CONFIG, jaasConfig);
-//            propsKafka.put(SaslConfigs.SASL_MECHANISM, saslMechanism);
-//            propsKafka.put("security.protocol", securityProtocol);
-//
-//        }
+        propsKafka.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+        propsKafka.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        propsKafka.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        if (sslEnabled) {
+            propsKafka.put(SslConfigs.SSL_KEYSTORE_LOCATION_CONFIG, keystoreLocation);
+            propsKafka.put(SslConfigs.SSL_KEYSTORE_PASSWORD_CONFIG, keystorePassword);
+            propsKafka.put(SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG, trustSoreLocation);
+            propsKafka.put(SslConfigs.SSL_TRUSTSTORE_PASSWORD_CONFIG, trustSorePassword);
+        }
+        if (jaasEnabled) {
+            propsKafka.put(SaslConfigs.SASL_JAAS_CONFIG, jaasConfig);
+            propsKafka.put(SaslConfigs.SASL_MECHANISM, saslMechanism);
+            propsKafka.put("security.protocol", securityProtocol);
+
+        }
             return propsKafka;
         }
     }
