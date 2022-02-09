@@ -1,6 +1,6 @@
 # Publish Keycloak Events to Kafka using SPI(plugins)
 
-You can find more details in the Blog post: https://xxx
+You can find more details in the Blog [post](https://www.ybentaleb.me/blog/kafka-keycloak-spi)
 
 ## Build jar
 ```
